@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cubes Quiz</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="multi.png" type="image/x-icon">
+
+</head>
+<body>
+  <h1>Welcome to Cubes Quiz</h1>
+  <button id="startBtn" class="button">Begin</button>
+
+  <div id="quizContainer" class="hidden">
+    <div class="score" id="score">Score: 0 / 0</div>
+    <div class="streak" id="streak"></div>
+    <div class="question" id="question">Question goes here</div>
+    <div class="options" id="options"></div>
+    <div class="feedback" id="feedback"></div>
+    <button id="endBtn" class="button" style="background-color:#f44336;">End Session</button>
+  </div>
+
+  <div id="summary" class="summary hidden"></div>
+  <div id="correctExplosion"></div>
+  <div id="wrongExplosion"></div>
+  
+  <script src="cubes.js"></script>
+</body>
+</html>

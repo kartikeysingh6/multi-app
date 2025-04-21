@@ -1,0 +1,250 @@
+/* Apply the background image to the entire page */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  background-image: url('math.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+/* Hide elements */
+.hidden {
+  display: none;
+}
+
+.button {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+.button-choice {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #9a3d8f;
+  color: white;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+.button-choice:hover {
+  background-color: #6c3253;
+}
+
+.question {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.options {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.option {
+  background-color: #e0e0e0;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.option:hover {
+  background-color: #c0c0c0;
+}
+
+.feedback {
+  font-size: 1.2rem;
+  margin: 1rem;
+}
+
+.score {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.summary {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.streak {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2.7rem;
+  color: orange;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: auto;
+}
+
+.summary {
+  font-size: 1.3rem;
+  text-align: center;
+  background-color: #fff8e1;
+  border: 2px solid #ffd54f;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(255, 193, 7, 0.5);
+  max-width: 500px;
+  margin-top: 2rem;
+  animation: fadeInUp 0.8s ease;
+}
+
+.summary h2 {
+  color: #ff6f00;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.summary p {
+  margin: 0.5rem 0;
+  font-weight: bold;
+  text-align: left;
+  color: #333;
+}
+
+.summary button {
+  margin-top: 1rem;
+  background-color: #4caf50;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.summary button:hover {
+  background-color: #43a047;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Explosion background overlay */
+#correctExplosion {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, #a5f1a1 10%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+#correctExplosion.active {
+  animation: expandExplosion 1.5s ease-out forwards;
+}
+
+@keyframes expandExplosion {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.9;
+  }
+  100% {
+    width: 4000px;
+    height: 4000px;
+    opacity: 0;
+  }
+}
+
+#wrongExplosion {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, #ff6666 10%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+#wrongExplosion.active {
+  animation: expandExplosion 1.5s ease-out forwards;
+}
+
+.highlightCorrect {
+  box-shadow: 0 0 15px 10px rgba(255, 255, 0, 0.8);
+  transition: box-shadow 0.3s ease-out;
+}
+
+html, body {
+  overflow: hidden;
+}
+
+.mode-buttons {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.mode-buttons .button.square {
+  background-color: #ff7043;
+}
+
+.mode-buttons .button.cube {
+  background-color: #42a5f5;
+}
+
+.mode-buttons .button.multi {
+  background-color: #fdd835;
+  color: black;
+}
