@@ -60,8 +60,8 @@ function endSession() {
 
 function nextQuestion() {
   questionStart = Date.now();
-  const num1 = getRandomInt(2, 25);
-  const num2 = getRandomInt(2, 15);
+  const num1 = getRandomInt(13, 13);
+  const num2 = getRandomInt(2, 20);
   const correct = num1 * num2;
   const lastDigit = correct % 10;
 
