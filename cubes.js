@@ -58,26 +58,53 @@ function endSession() {
   `;
 }
 
+// Global scope
+let numbersList = [];
+let currentIndex = 0;
+
+function shuffleArray(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+}
+
+function prepareNumbers() {
+  numbersList = [];
+  for (let i = 1; i <= 20; i++) {
+    numbersList.push(i);
+  }
+  shuffleArray(numbersList);
+  currentIndex = 0;
+}
+
+// Call once at start
+prepareNumbers();
+
 function nextQuestion() {
   questionStart = Date.now();
-  const num1 = getRandomInt(1, 20);
+
+  if (currentIndex >= numbersList.length) {
+    prepareNumbers(); // reshuffle after all used
+  }
+
+  const num1 = numbersList[currentIndex];
+  currentIndex++;
+
   const correct = num1 * num1 * num1;
   const lastDigit = correct % 10;
-
-  let wrong1, wrong2;
 
   function generateTrickyWrong() {
     let val;
     do {
       const offset = getRandomInt(-30, 30);
       val = correct + offset;
-    } while (
-      val === correct || val < 0 || (val % 10 !== lastDigit)
-    );
+    } while (val === correct || val < 0 || (val % 10 !== lastDigit));
     return val;
   }
 
-  wrong1 = generateTrickyWrong();
+  let wrong1 = generateTrickyWrong();
+  let wrong2;
   do {
     wrong2 = generateTrickyWrong();
   } while (wrong2 === wrong1);
@@ -158,6 +185,7 @@ function nextQuestion() {
     optionsEl.appendChild(btn);
   });
 }
+
 
 startBtn.onclick = startSession;
 endBtn.onclick = endSession;

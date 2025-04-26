@@ -63,7 +63,7 @@ function nextQuestion() {
   const allowedNumbers = [12];
   const num1 = allowedNumbers[Math.floor(Math.random() * allowedNumbers.length)];
   const num2 = getRandomInt(2, 20);
-  const correct = num1 * num2;
+  const correct = (num1 * num2)/num1;
   const lastDigit = correct % 10;
 
   let wrong1, wrong2;
@@ -86,8 +86,7 @@ function nextQuestion() {
 
   const options = [correct, wrong1, wrong2].sort(() => Math.random() - 0.5);
 
-  const asking_way = getRandomInt(0, 1);
-  questionEl.innerText = `What is ${asking_way === 1 ? num1 : num2} × ${asking_way === 1 ? num2 : num1}?`;
+  questionEl.innerText = `What is ${num1*num2} / ${num1}?`;
 
   optionsEl.innerHTML = "";
   feedbackEl.innerText = "";
