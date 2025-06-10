@@ -71,7 +71,7 @@ function shuffleArray(arr) {
 
 function prepareNumbers() {
   numbersList = [];
-  for (let i = 1; i <= 51; i++) {
+  for (let i = 1; i <= 50; i++) {
     numbersList.push(i);
   }
   shuffleArray(numbersList);
