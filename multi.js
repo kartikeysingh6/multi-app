@@ -60,7 +60,7 @@ function endSession() {
 
 function nextQuestion() {
   questionStart = Date.now();
-  const allowedNumbers = [12, 13];
+  const allowedNumbers = [3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,19];
   const num1 = allowedNumbers[Math.floor(Math.random() * allowedNumbers.length)];
   const num2 = getRandomInt(2, 20);
   const correct = num1 * num2;
