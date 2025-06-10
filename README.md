@@ -162,3 +162,73 @@
 - 71, 73, 79,
 - 83, 89,
 - 97
+
+## 8. Divisibility Rules till 20
+- 1: All Numbers
+- 2: Last digit must be even
+- 3: Sum of digits = div by 3
+- 4: Last 2 digits = div by 4 or twice div by 2
+- 5: Last digit = 0 or 5
+- 6: Must be div by both 2 & 3
+- 7: Remaining - 2xLast_digit = div by 7
+- 8: Last 3 digits = div by 8 or thrice div by 2
+- 9: Sum of digits = div by 9
+- 10: Last digit = 0
+- 11: Alternate sum difference = div by 11
+- 12: Must be div by both 4 & 3
+- 13: Remaining + 4xLast_digit = div by 13
+- 14: Last digit even & div by 7
+- 15: Must be div by both 5 & 3
+- 16: Last 4 digits = div by 16 or four times div by 2
+- 17: Remaining - 5xLast_digit = div by 17
+- 18: Last digit even & div by 9
+- 19: Remaining + 2xLast_digit = div by 19
+- 20: Last digit = 0 & remaining even
+
+## 9. %age and Fraction equivalent
+- 1 = 100%
+- ½ = 50%
+- ⅓ = 33.33% or 33 ⅓ %
+- ⅔ = 66.67% or 66 ⅔ %
+- ¼ = 25%
+- ¾ = 75%
+- ⅕ = 20%
+- ⅖ = 40%
+- ⅗ = 60%
+- ⅘ = 80%
+- ⅙ = 16.67% or 16 ⅔ %
+- ⅚ = 83.33% or 83 ⅓ %
+- ¹⁄₇ = 14.28% or 14 2/7 %
+- ²⁄₇ = 28.57% or 28 4/7 %
+- ³⁄₇ = 42.86% or 42 6/7 %
+- ⁴⁄₇ = 57.14% or 57 1/7 %
+- ⁵⁄₇ = 71.43% or 71 3/7 %
+- ⁶⁄₇ = 85.71% or 85 5/7 %
+- ⅛ = 12.5% or 12 ½ %
+- ⅜ = 37.5% or 37 ½ %
+- ⅝ = 62.5% or 62 ½ %
+- ⅞ = 87.5% or 87 ½ %
+- ¹⁄₉ = 11.11% or 11 1/9 %
+- ²⁄₉ = 22.22% or 22 2/9 %
+- ⁴⁄₉ = 44.44% or 44 4/9 %
+- ⁵⁄₉ = 55.56% or 55 5/9 %
+- ⁷⁄₉ = 77.78% or 77 7/9 %
+- ⁸⁄₉ = 88.89% or 88 8/9 %
+- ¹⁄₁₀ = 10%
+- ¹⁄₁₁ = 9.09% or 9 1/11 %
+- ²⁄₁₁ = 18.18% or 18 2/11 %
+- ³⁄₁₁ = 27.27% or 27 3/11 %
+- ⁴⁄₁₁ = 36.36% or 36 4/11 %
+- ⁵⁄₁₁ = 45.45% or 45 5/11 %
+- ⁶⁄₁₁ = 54.54% or 54 6/11 %
+- ⁷⁄₁₁ = 63.63% or 63 7/11 %
+- ⁸⁄₁₁ = 72.72% or 72 8/11 %
+- ⁹⁄₁₁ = 81.81% or 81 9/11 %
+- ¹⁰⁄₁₁ = 90.90% or 90 10/11 %
+- ¹⁄₁₂ = 8.33% or 8 ⅓ %
+- ⁵⁄₁₂ = 41.67% or 41 ⅔ %
+- ⁷⁄₁₂ = 58.33% or 58 ⅓ %
+- ¹¹⁄₁₂ = 91.67% or 91 ⅔ %
+- ¹⁄₁₃ = 7.69% or 7 9/13 %
+- ¹⁄₁₄ = 7.14% or 7 1/7 %
+- ¹⁄₁₅ = 6.67% or 6 ⅔ %
